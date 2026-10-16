@@ -1,0 +1,400 @@
+/*
+ * One stylesheet for the whole site.
+ * Values are measured from the original Superhuman (Coda) doc at 1440px width.
+ */
+
+/* Smooth fade between pages instead of a hard reload flash */
+@view-transition { navigation: auto; }
+
+/* Always reserve scrollbar space so short and long pages line up */
+html { scrollbar-gutter: stable; }
+
+@font-face {
+  font-family: "Super Sans VF";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: block;
+  src: url("../assets/fonts/SuperSans-VF-Upright.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Super Sans VF";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: block;
+  src: url("../assets/fonts/SuperSans-VF-Italic.woff2") format("woff2");
+}
+
+:root {
+  --text: rgb(20, 20, 19);
+  --text-muted: rgb(115, 113, 109);
+  --text-faint: rgb(141, 138, 134);
+  --link: rgb(17, 115, 168);
+  --highlight: rgb(254, 241, 187);
+  --row-border: rgba(20, 20, 19, 0.12);
+  --purple: rgb(113, 76, 182);
+
+  --chip-yes: rgb(139, 195, 74);
+  --chip-no: rgb(240, 84, 75);
+  --chip-unclear: rgb(176, 39, 158);
+
+  --font: "Super Sans VF", system-ui, sans-serif;
+  --content-width: 800px;
+  --topbar-height: 56px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--link); }
+.page a { white-space: nowrap; } /* the original never splits a link across two lines */
+
+/* Same text shaping as the original doc: contextual alternates off */
+.page {
+  font-feature-settings: "calt" 0;
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+}
+
+/* ---------- Top bar ---------- */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  height: var(--topbar-height);
+  background: #fff;
+  view-transition-name: topbar; /* top bar stays put while the page fades */
+}
+
+.doc-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 300px;
+  flex-shrink: 0;
+  padding: 0 24px 0 25px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+}
+.doc-title span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tabs {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tab {
+  display: block;
+  flex-shrink: 0;
+  max-width: 240px;
+  padding: 17px 20px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.tab span {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* The original doc doesn't underline the current tab; uncomment to show one. */
+/* .tab.active { border-bottom-color: var(--text); } */
+
+/* ---------- Cover image (home only) ---------- */
+
+.cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 1;
+  object-fit: cover;
+}
+
+/* ---------- Page layout ---------- */
+
+.page {
+  position: relative;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 53px 0 200px;
+}
+
+.page-header { position: relative; }
+
+.page-icon {
+  position: absolute;
+  left: -51px;
+  top: 4px;
+  width: 40px;
+  height: 40px;
+}
+
+.page-title {
+  margin: 0 0 0 -2px;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 600;
+}
+
+.page-subtitle {
+  margin-top: 16px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.05px;
+  color: var(--text-muted);
+}
+
+.page-resource-link {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.05px;
+  color: var(--text-muted);
+}
+.page-resource-link span {
+  color: var(--text-muted);
+}
+.page-resource-link a {
+  color: var(--link);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.page-body {
+  margin-top: 32px;
+  /* Links to page.html#page-content land like the original: title just under the top bar */
+  scroll-margin-top: calc(var(--topbar-height) + 30px);
+}
+.page-body > :first-child { padding-top: 0; }
+.page-body > :last-child { padding-bottom: 0; }
+
+/* Empty lines the original doc leaves after the last paragraph */
+.trailing-space { display: block; }
+
+/* ---------- Text blocks ---------- */
+
+p { margin: 0; padding: 6px 0; }
+.spacer { height: 36px; }
+
+h1.section, h2.section, h3 { margin: 0; padding: 4px 0; }
+
+h1.section {
+  margin-top: 32px;
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+h2.section {
+  margin-top: 24px;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  letter-spacing: 0.045px;
+}
+
+/* "Activity N:" headings with the grey bar on the left */
+.activity {
+  position: relative;
+  margin: 0;
+  padding: 6px 0 6px 24px;
+  font-size: 26px;
+  line-height: 36px;
+  font-weight: 400;
+  letter-spacing: 0.26px;
+  color: var(--link);
+}
+.activity::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  background: var(--text-muted);
+}
+.activity.bold { font-weight: 700; }
+
+/* Indented blue "Example:" blocks (AI vs. ML page) */
+.example {
+  padding-left: 28px;
+  color: var(--link);
+}
+
+ul, ol { margin: 0; padding: 0 0 0 28px; }
+li { padding: 4px 0; }
+.page-body > ul > li:first-child, .page-body > ol > li:first-child { padding-top: 6px; }
+.page-body > ul > li:last-child, .page-body > ol > li:last-child { padding-bottom: 6px; }
+li:has(> ol), li:has(> ul) { padding-bottom: 0; }
+li > ol, li > ul { margin-top: 4px; }
+ul { list-style: none; }
+ul > li { position: relative; }
+ul > li::before {
+  content: "•";
+  position: absolute;
+  left: -20px;
+  font-size: 12px;
+}
+ol ol { list-style: lower-alpha; }
+
+.highlight { background: var(--highlight); }
+.muted { color: var(--text-muted); }
+.blue { color: var(--link); }
+.blue-bold { color: var(--link); font-weight: 700; }
+
+/* Links to other pages of the doc: bold, blue, no underline, optional icon */
+.doc-link {
+  color: var(--link);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+h3 .doc-link { font-weight: 600; }
+.doc-link img {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: -2px;
+}
+h3 .doc-link img { width: 18px; height: 18px; }
+
+.figure {
+  display: block;
+  margin: 6px auto 13px;
+}
+
+/* ---------- Tables ---------- */
+
+.table-block { margin-top: 24px; padding: 5px 0 6px; }
+.table-block.tight { margin-top: 20px; }
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 33px;
+  margin-bottom: 6px;
+  scroll-margin-top: calc(var(--topbar-height) + 5px);
+}
+.table-title {
+  margin: 0;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+}
+.table-title.small { margin-top: 2px; font-size: 18px; line-height: 26px; letter-spacing: 0.045px; }
+.table-search {
+  width: 32px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(20, 20, 19, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+}
+
+/* Tables can be wider than the text column, like the original.
+   No overflow here on desktop, so the sticky header below can stick to the page. */
+.table-scroll {
+  width: calc(50vw + var(--content-width) / 2 - 16px);
+}
+
+table {
+  /* separate (not collapsed) borders: Chrome paints sticky header cells correctly this way */
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  font-size: 14px;
+  line-height: 20px;
+}
+th, td {
+  padding: 8px 6px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--row-border);
+}
+th {
+  /* Header row stays visible (5px under the top bar) until the table's last row scrolls past */
+  position: sticky;
+  top: calc(var(--topbar-height) + 5px);
+  z-index: 2;
+  background: #fff;
+  box-shadow: 0 -5px 0 #fff; /* covers the 5px gap under the top bar while pinned */
+  height: 33px;
+  padding: 4px 6px 8px;
+  vertical-align: bottom;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+th.tall { height: 53px; }
+
+/* The "+" row under each table (decorative) */
+.add-row {
+  height: 37px;
+  margin-bottom: 12px;
+  padding: 8px 6px;
+  color: var(--text-faint);
+}
+.add-row svg { display: block; }
+td p { padding: 0; }
+td p + p { padding-top: 8px; }
+
+.person { display: flex; align-items: center; line-height: 24px; }
+.person img { width: 24px; height: 24px; border-radius: 50%; }
+.person span { margin-left: 8px; flex: 1; }
+
+.chevron { flex-shrink: 0; vertical-align: middle; }
+
+.rating { display: flex; color: var(--text-faint); }
+.rating .on { color: var(--purple); }
+
+.chip { display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
+.chip.yes { color: var(--chip-yes); }
+.chip.no { color: var(--chip-no); }
+.chip.unclear { color: var(--chip-unclear); }
+
+/* ---------- Smaller screens ---------- */
+
+@media (max-width: 900px) {
+  .doc-title { width: auto; max-width: 200px; }
+  .page { padding-left: 16px; padding-right: 16px; }
+  .page-icon { position: static; display: block; margin-bottom: 12px; }
+  .table-scroll { width: 100%; overflow-x: auto; } /* side-scroll on phones (header doesn't stick here) */
+  .table-header { width: auto !important; }
+}
