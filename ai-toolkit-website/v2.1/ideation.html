@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ideation · AI in Education Toolkit for Racial Equity</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="ideation">
+  <!-- Icons reused in the tables below via <use href="#..."> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="thumb-on" viewBox="0 0 20 20"><path fill="currentColor" d="M4.75 6.5v11H2v-11zM7.403 1.5H9.75c.792 0 1.41.34 1.792.925.35.535.458 1.204.458 1.825V6.5h4.749a2.75 2.75 0 0 1 2.66 3.45l-1.448 5.5a2.75 2.75 0 0 1-2.66 2.05H6.25v-11h-.002z"/></symbol>
+    <symbol id="thumb-off" viewBox="0 0 20 20"><path fill="currentColor" d="M9.75 1.5a2.75 2.75 0 0 1 2.75 2.75V6.5h4.249a2.75 2.75 0 0 1 2.66 3.45l-1.448 5.5a2.75 2.75 0 0 1-2.66 2.05H2v-11h4.165l1.25-5zM3.5 16H6V8H3.5zm4-8.658V16h7.802a1.25 1.25 0 0 0 1.209-.932l1.447-5.5A1.25 1.25 0 0 0 16.749 8H11V4.25C11 3.56 10.44 3 9.75 3H8.585z"/></symbol>
+    <symbol id="chevron" viewBox="0 0 12 12"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+    <symbol id="plus" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.2"/></symbol>
+    <symbol id="search" viewBox="0 0 20 20"><circle cx="9" cy="9" r="5.75" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 13.5l3.5 3.5" stroke="currentColor" stroke-width="1.5"/></symbol>
+  </svg>
+
+  <header class="topbar">
+    <a class="doc-title" href="index.html">
+      <img src="assets/icons/toolbox.svg" alt="" width="20" height="20"><span>AI in Education Toolkit for Racial Equity</span>
+    </a>
+    <nav class="tabs" aria-label="Pages">
+      <a class="tab" href="how-to-use.html" title="How To Use"><span>How To Use</span></a>
+      <a class="tab active" href="ideation.html" title="Ideation"><span>Ideation</span></a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="page-header">
+      <img class="page-icon" src="assets/icons/idea.svg" alt="">
+      <h1 class="page-title">Ideation</h1>
+    </div>
+
+    <div class="page-body" id="page-content">
+      <p>This section explains how to ideate with edtech products while keeping racial bias in mind. Ideation includes all the steps from your first idea "spark" to the decision that your idea is worth executing. You might think this happens on the business or product sideーbut for an AI engineer, ideation is one of the most critical steps in the software development process. If you don’t think very carefully about whether AI is the right tool for your problem, you may later find that your AI solution wasn’t the right fitーyou’ll have wasted a lot of effort. At this stage, you need to clearly articulate what you hope to do with AI and why using AI is the right decision. Make sure you consider the education context in which it will be used to answer these questions. After this section, you'll explore your <a class="doc-link" href="https://docs.superhuman.com/@edtechequity/edtech-ai-toolkit-for-racial-equity/logical-assumptions-19" target="_blank" rel="noopener"><img src="assets/icons/megaphone.svg" alt="">Logical Assumptions</a>.</p>
+
+      <h1 class="section">🎯 Goals</h1>
+      <ul>
+        <li>Articulate the value proposition of your idea <em>before</em> you look at the data</li>
+        <li>Evaluate whether AI or ML is appropriate for your scenario</li>
+        <li>Define the risks to racial equity if things go wrong</li>
+        <li>Appropriately scope the required resources to achieve your goal</li>
+      </ul>
+
+      <h1 class="section">🚧 Caution!</h1>
+      <p><strong>If you’ve collected a lot of data, and are now considering what AI can do for youーthis is an especially important step for you:</strong></p>
+      <ul>
+        <li>Talk to educators and Black and Brown students who will eventually use your product. Start your design and development process from a deep understanding of a specific educational context.</li>
+        <li>Understand student and teacher needs: What makes things difficult for them?&nbsp; What would it look like if the problem went away? The steps in this toolkit will help you identify dangerous assumptions you might otherwise make along the way.</li>
+      </ul>
+
+      <h1 class="section">✅ Activities for Ideation</h1>
+
+      <!-- ============ Activity 1 ============ -->
+      <h2 class="activity">Activity 1: Collect and Vet Ideas with Your Team AND Your Users</h2>
+
+      <p><strong>Step 1: In no more than 3 sentences, use the table below to explain your idea.</strong> You don’t need to know how you'll make it work yet, but if you had a magic wand that brought your idea to life, what would happen? Before you begin development, it's critical that every product manager and engineer on your team is on the same page about your goal. Make sure that's the case, and socialize conceptions with everyone on the team.</p>
+
+      <div class="table-block">
+        <div class="table-header" id="ai-idea-collection" style="width: 803px">
+          <h4 class="table-title">AI Idea Collection</h4>
+          <span class="table-search"><svg width="20" height="20"><use href="#search"/></svg></span>
+        </div>
+        <div class="table-scroll">
+          <table style="width: 803px">
+            <colgroup><col style="width: 464px"><col style="width: 163px"><col style="width: 176px"></colgroup>
+            <thead><tr><th class="tall">What's the idea?</th><th class="tall">Submitted By</th><th class="tall">Feedback and Concerns</th></tr></thead>
+            <tbody>
+              <tr style="height: 85px">
+                <td>We will personalize in real-time the order and type of lessons students see, based on their interests and level of understanding.</td>
+                <td><div class="person"><img src="assets/images/avatar-madison.jpg" alt=""><span>Madison Jacobs</span><svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+                <td>I like this idea because...</td>
+              </tr>
+              <tr>
+                <td>We will assess each kid's understanding of math and literacy and highlight areas of weakness to the teacher.</td>
+                <td><div class="person"><img src="assets/images/avatar-nidhi.png" alt=""><span>Nidhi Hebbar</span><svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+                <td>I have concerns about this idea because...</td>
+              </tr>
+              <tr>
+                <td>We will recommend the most engaging and effective content for each student on any given topic.</td>
+                <td><div class="person"><img src="assets/images/avatar-matthew.png" alt=""><span>Matthew Volk</span><svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+                <td>I like this idea because...</td>
+              </tr>
+              <tr>
+                <td>We will flag students who are at risk of dropping out or having a behavioral issue, before it's too late.</td>
+                <td><div class="person"><img src="assets/images/avatar-liz.png" alt=""><span>Liz Allendorf</span><svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+                <td>I have concerns about this idea because...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="add-row"><svg width="14" height="14"><use href="#plus"/></svg></div>
+      </div>
+
+      <p><strong>Step 2: Make sure that teachers, students, and parents would value and welcome your idea.</strong> Talk to your users, and make sure students – Black and Brown students – are included. What questions or concerns do they have? Even if you feel your idea is still worth exploring, you should revisit their concerns later in the process. Involve your users at several steps in the design and development process to make sure you aren’t later surprised by their concerns.</p>
+
+      <div class="table-block">
+        <div class="table-header" style="width: 800px">
+          <h4 class="table-title">User Interviews and Feedback</h4>
+          <span class="table-search"><svg width="20" height="20"><use href="#search"/></svg></span>
+        </div>
+        <div class="table-scroll">
+          <table style="width: 767px">
+            <colgroup><col style="width: 150px"><col style="width: 277px"><col style="width: 150px"><col style="width: 190px"></colgroup>
+            <thead><tr><th class="tall">Interview date</th><th class="tall">User Type</th><th class="tall">User Feeling</th><th class="tall">User Concerns</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>March 3, 2020</td>
+                <td>Two teachers at a low-income public school</td>
+                <td><div class="rating"><svg class="on" width="20" height="20"><use href="#thumb-on"/></svg><svg class="on" width="20" height="20"><use href="#thumb-on"/></svg><svg class="on" width="20" height="20"><use href="#thumb-on"/></svg><svg width="20" height="20"><use href="#thumb-off"/></svg><svg width="20" height="20"><use href="#thumb-off"/></svg></div></td>
+                <td>Concerned that flagging students who are at-risk will make certain students appear a "lost cause".</td>
+              </tr>
+              <tr>
+                <td>March 6, 2020</td>
+                <td>Four students at a small private school</td>
+                <td><div class="rating"><svg class="on" width="20" height="20"><use href="#thumb-on"/></svg><svg class="on" width="20" height="20"><use href="#thumb-on"/></svg><svg class="on" width="20" height="20"><use href="#thumb-on"/></svg><svg class="on" width="20" height="20"><use href="#thumb-on"/></svg><svg class="on" width="20" height="20"><use href="#thumb-on"/></svg></div></td>
+                <td>Excited to have more interesting content. Don't like that it reports to their teacher how many pages the students read.</td>
+              </tr>
+              <tr>
+                <td>March 11, 2020</td>
+                <td>Parents of 3 K-12 students in an urban public school</td>
+                <td><div class="rating"><svg class="on" width="20" height="20"><use href="#thumb-on"/></svg><svg class="on" width="20" height="20"><use href="#thumb-on"/></svg><svg width="20" height="20"><use href="#thumb-off"/></svg><svg width="20" height="20"><use href="#thumb-off"/></svg><svg width="20" height="20"><use href="#thumb-off"/></svg></div></td>
+                <td>Not comfortable with discipline data being used for predictive purposes. Worried that app may not be able to understand students struggling to learn English.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="add-row"><svg width="14" height="14"><use href="#plus"/></svg></div>
+      </div>
+
+      <div class="spacer"></div>
+
+      <!-- ============ Activity 2 ============ -->
+      <h2 class="activity">Activity 2: Is AI or ML the Right Decision?</h2>
+
+      <p><strong>Make sure you understand what AI and ML are. In the Appendix, you can learn more on the difference between <a class="doc-link" href="ideation/ai-vs-ml.html"><img src="assets/icons/artificial-intelligence.svg" alt="">AI vs. ML</a>.</strong></p>
+
+      <p>In brief, an artificial intelligence (AI) algorithm is any algorithm that simulates intelligent thought. Often, such algorithms simply use data as an input with a <a href="https://pathmind.com/wiki/ai-vs-machine-learning-vs-deep-learning" target="_blank" rel="noopener">set of rules</a> to produce an output – this could be a recommendation, a label, or a decision. These rules might be the complex math that allows Google search to identify cat pictures. But AI can also be more basic. For example, if you’re ever played PacMan, you have seen AI in action: a programmer wrote code that tells the ghosts precisely what to do: change direction when you hit a wall, follow a set of rules (algorithm) to get to PacMan the fastest, turn blue when PacMan eats a yellow pill, and so on.</p>
+
+      <p>AI algorithms are just a set of rules that produce different kinds of output based on what data you give it. By this definition, you most likely use AI in your software alreadyーeven if it’s simple if/else statements. Your team must understand the logic and assumptions behind these sets of rules, and this toolkit will still help you uncover potential bias even if you never decide to use a more complicated form of AI, machine learning.</p>
+
+      <p>Machine learning (ML) is a type of AI that learns over time how to do something. We recommend exploring supervised ML, in which you provide a "machine" with a task (something you want the algorithm to do) as well as a dataset (which contains examples of tasks and their "correct" outcomes). If you’re new to ML, we don’t recommend <a href="https://www.datarobot.com/wiki/unsupervised-machine-learning/" target="_blank" rel="noopener">unsupervised ML</a> or <a href="https://machinelearningmastery.com/what-is-deep-learning/" target="_blank" rel="noopener">deep learning algorithms</a> in the education context. The indiscernibility of deep learning algorithms make it more difficult to both find and address bias. That being said, all algorithms, whether they are deep learning or traditional machine learning, should be checked for bias. The key is to test your algorithms and ultimately your products to ensure they serve Black and Brown students equally as well as they serve other groups of students. Below are some useful criteria to evaluate whether or not ML is a good idea for your product.</p>
+
+      <div class="spacer"></div>
+
+      <!-- ============ Activity 3 ============ -->
+      <h2 class="activity">Activity 3: Evaluate Whether ML Makes Sense for You</h2>
+
+      <p>Not every good idea will satisfy the below criteria, but all reasonable scenarios should at least address the below issues with a mitigation and disclosure plan.</p>
+
+      <p>You want to detect, predict, or infer something that people generally agree on when they see it, or that has a clear, well-defined answer.</p>
+
+      <ol>
+        <li>
+          <strong>You want to detect, predict, or infer something that people generally agree on when they see it, or that has a clear, well-defined answer.</strong>
+          <ol>
+            <li>Bad question: “Is this a good student?”</li>
+            <li>Better question: “Is this student going to drop out before s/he graduates?”</li>
+            <li>Even better question: “Is this student going to get a C or higher in all courses this year?”</li>
+          </ol>
+        </li>
+        <li><strong>You have a ton of data.</strong> A useful metric is at least 1,000 examples per “class” of data. If you are trying to determine if something is a plant or a flower, you have at least 1,000 pictures of plants and at least 1,000 pictures of flowers.</li>
+        <li><strong>Your problem is difficult to scale</strong>. For instance, maybe a teacher can’t decipher 10,000 images of student-drawn plants and flowers in the next hour. An algorithm would help meet the deadline, even if the results are less than perfect.</li>
+        <li><strong>If your algorithm guesses wrong, limited tangible harm is done to any human.</strong> If there is potential to harm a human, safeguards should be put in place to allow another human to step in and make corrections before real damage is done. Your algorithm should be a helper for a human in charge, not a standalone decision-maker. For example, misidentifying a flower from a plant may not be a huge deal on its own. But if that misidentification determines which academic track a student is placed on, you should make sure a teacher can review and intervene. Similarly, if your algorithm incorrectly flags students as having high behavioral risk or does not adequately flag a student likely to harm another student, an algorithm may not be appropriate.</li>
+      </ol>
+
+      <div class="spacer"></div>
+
+      <p>Use the charts below (pre-populated with bad and good examples each) to evaluate whether ML makes sense for you. This is not an exhaustive list of criteria for you to consider; the following stages of the toolkit will provide additional considerations.</p>
+
+      <p><em>The chart demonstrates a bad example scenario of a company evaluating whether or not they should utilize usage behavior data (click patterns on a page) and machine learning to determine whether or not a student is engaged.</em></p>
+
+      <div class="table-block tight">
+        <div class="table-header" style="width: 1010px">
+          <h4 class="table-title small">Bad Example</h4>
+          <span class="table-search"><svg width="20" height="20"><use href="#search"/></svg></span>
+        </div>
+        <div class="table-scroll">
+          <table style="width: 1010px">
+            <colgroup><col style="width: 222px"><col style="width: 370px"><col style="width: 111px"><col style="width: 307px"></colgroup>
+            <thead><tr><th>Question</th><th>Validation Plan</th><th>Answer</th><th>Mitigation Plan</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>Are you detecting, predicting, or inferring something that people generally agree on when they see it, or that has a clear, well-defined answer.</strong></td>
+                <td class="muted"><p><em>Present example scenarios and ask teachers, students, and families if they think students are engaged or not. Clearly define that the options are either engaged or not, with nothing in between.</em></p><p><em>[If the answers vary, then the question may not be a good use case for ML, given the data we have.]</em></p></td>
+                <td><strong>Probably not</strong></td>
+                <td>If <strong>NO</strong>, talk with schools, students, and parents to identify what data we would need or how we might reframe the question to have a more clear, well-defined answer.</td>
+              </tr>
+              <tr>
+                <td><strong>Do you have enough data?</strong></td>
+                <td class="muted"><p><em>Make sure you have at least 1,000 data points for each type of behavior, across a diverse representation of students to ensure you’ve accounted for usage behavior from all engagement "types".</em></p><p><em>[This likely requires several thousands of students.]</em></p></td>
+                <td><strong>Yes</strong></td>
+                <td>If <strong>NO</strong>, talk to schools or other communities to find out if this is data they would be comfortable sharing. If so, request access to a larger dataset.</td>
+              </tr>
+              <tr>
+                <td><strong>Do you have a problem that is hard to scale without technology?</strong></td>
+                <td class="muted"><p><em>Did schools share this issue as an example of something time-consuming and burdensome for their teachers or students? Are teachers struggling to assess whether their students are engaged or not in a timely manner for all their students?</em></p><p><em>Do we internally need to distinguish between engaged and unengaged students, and we cannot do this manually or with basic if/then statements? Would it be too time-consuming for an employee to look at the data and determine whether individual students are engaged or not?</em></p></td>
+                <td><strong>Yes</strong></td>
+                <td>If <strong>NO</strong>, explore what it would look like for a human to take on this task instead.</td>
+              </tr>
+              <tr>
+                <td><strong>If your algorithm is wrong, will it cause tangible harm to a human?</strong></td>
+                <td class="muted"><p><em>Ask schools what would happen if a student gets labeled as disengaged when they are engaged, or vice versa. Ask teachers and students how they feel about erroneous results to assess the severity of the situation. Never decide for yourself without exploring with users whether the harm is "serious enough."</em></p><p><em>In this scenario, a student labeled "disengaged" might not progress as quickly as an "engaged" student, and ultimately receive a less ambitious educational experience. The product might alternatively label a disengaged student as engaged, giving the student more challenging content, leading the student to fail and become discouraged.</em></p></td>
+                <td><strong>Yes</strong></td>
+                <td>if <strong>YES</strong>, pause before proceeding. Consider ways to mitigate errors or to incorporate safeguards so that mistakes are less severe. You may be able to create opportunities for human review or intervention. For example, before the content is changed to a less complex pathway, recommend that a teacher check in with the student and make a human recommendation.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="add-row"><svg width="14" height="14"><use href="#plus"/></svg></div>
+      </div>
+
+      <div class="spacer"></div>
+
+      <p><em>The chart demonstrates a good example scenario of a company evaluating whether or not they should utilize usage behavior data (click patterns on a page) and machine learning to determine whether or not a student attempted to game the system - to appear as if they’ve read the text rather than having actually completed the module.</em></p>
+
+      <div class="table-block">
+        <div class="table-header" style="width: 879px">
+          <h4 class="table-title">Good Example</h4>
+          <span class="table-search"><svg width="20" height="20"><use href="#search"/></svg></span>
+        </div>
+        <div class="table-scroll">
+          <table style="width: 879px">
+            <colgroup><col style="width: 285px"><col style="width: 458px"><col style="width: 136px"></colgroup>
+            <thead><tr><th>Question</th><th>Validation Plan</th><th>Answer</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>Are you detecting, predicting, or inferring something that people generally agree on when they see it, or that has a clear, well-defined answer.</strong></td>
+                <td class="muted"><p><em>Present example scenarios to schools and ask teachers, students, and families if they would classify student behavior as gaming the system or actually reading. [If the answers vary, then the question may not be a good use case for ML, given the data we have.</em></p></td>
+                <td><strong>Yes</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Do you have enough data?</strong></td>
+                <td class="muted"><p><em>Make sure you have at least 1,000 data points for each scenario&nbsp;– students actually reading and students gaming the system across a diverse representation of students to ensure you’ve accounted for usage behavior from all engagement "types".</em></p><p><em>[This likely requires several thousands of students.]</em></p></td>
+                <td><strong>Yes</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Do you have a problem that is hard to scale without technology?</strong></td>
+                <td class="muted"><p><em>Ask teachers or parents if they have a hard time figuring out when students actually read or gamed the system. Teachers do struggle to keep track of all students at all times, so this may help them understand why students who appear to have read a given book still struggle to demonstrate reading comprehension.</em></p><p><em>Do we internally need to distinguish between students who read vs. those who didn’t, and we cannot do this manually or with basic if/hen statements? It would be difficult for an employee to do this for all students, and basic if/then statements may not incorporate the unique differences between different students’ behavior.</em></p></td>
+                <td><strong>Yes</strong></td>
+              </tr>
+              <tr>
+                <td><strong>If your algorithm is wrong, will it cause tangible harm to a human?</strong></td>
+                <td class="muted"><p><em>Work with schools to understand what would happen if a student gets labeled as having gamed the system when they haven’t, or vice versa. Never decide for yourself without exploring with users whether the harm is "serious enough."</em></p><p><em>In this case, a student mislabeled as gaming the system might be reprimanded and a student who isn’t identified may be considered at a mastery level that doesn’t match their needs (below or above, depending on luck). It’s important to share this potential with teachers so that they check in with students labeled as “gaming the system” rather than punishing them automatically.</em></p></td>
+                <td><strong>Yes</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="add-row"><svg width="14" height="14"><use href="#plus"/></svg></div>
+      </div>
+
+      <div class="spacer"></div>
+
+      <!-- ============ Activity 4 ============ -->
+      <h2 class="activity bold">Activity 4: What could go wrong?</h2>
+
+      <p>Most likely, your company’s use case does not pass the above criteria test with flying colors as a perfect ML use case. Threat models like <a href="https://docs.microsoft.com/en-us/security/threat-modeling-aiml" target="_blank" rel="noopener">Microsoft's</a> can help you assess for what might go wrong. Edtech products can have a significant positive or negative impact on a child’s life. You should continuously ask "what might go wrong" throughout your design and development process.</p>
+
+      <p><strong>Step 1: Realize it is not what you think.</strong></p>
+
+      <p>You can't predict everything that might go wrong while sitting at your desk or in your office. Ask the people who will use your product AND those impacted by your product about the use of algorithms. What do (Black and Brown) students and teachers think of your plan to use machine learning in this scenario? What about learning researchers? Students, teachers, administrators, and other members of their community will each have their concerns when they learn that AI or ML is being used in their schools. You should engage in these conversations often and incorporate their concerns as important feedback.</p>
+
+      <p><strong>Step 2: Summarize and share all risks with a diverse group of schools, students, and families.</strong>&nbsp; Leave time in your development to make changes based on their reactions and concerns. If your users would be concerned with the worst-case scenario, machine learning is likely <strong><em>not</em></strong> the right solution. If users don't feel their concerns have been addressed by the end of your development process, then using these tools is likely not a good idea for this community. Your product cannot be successful without their buy-in.</p>
+
+      <div class="spacer"></div>
+
+      <!-- ============ Activity 5 ============ -->
+      <h2 class="activity bold">Activity 5: What will it cost?</h2>
+
+      <p>It may seem too early to assess cost, but this is precisely the time to determine whether you have the resources to create a meaningful and safe ML model. Do not proceed if you don't have the required resources!&nbsp; <strong>Consider a (non-exhaustive) list of resources required to be a part of the team:</strong></p>
+
+      <div class="table-block">
+        <div class="table-header" style="width: 800px">
+          <h4 class="table-title">Tasks</h4>
+          <span class="table-search"><svg width="20" height="20"><use href="#search"/></svg></span>
+        </div>
+        <div class="table-scroll">
+          <table style="width: 740px">
+            <colgroup><col style="width: 440px"><col style="width: 179px"><col style="width: 121px"></colgroup>
+            <thead><tr><th>Question</th><th>Responsible</th><th>Yes or No</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>Software engineer(s) with significant ML experience understand all the issues laid out by this guide and can execute them over the long term.</td>
+                <td><div class="person"><img src="assets/images/avatar-liz.png" alt=""><span>Liz Allendorf</span><svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+                <td><div class="chip yes">Yes<svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+              </tr>
+              <tr>
+                <td>Data scientist(s) deeply understand the data going into the ML pipeline and have the resources needed to understand any questions they might have about it.</td>
+                <td><div class="person"><img src="assets/images/avatar-nidhi.png" alt=""><span>Nidhi Hebbar</span><svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+                <td><div class="chip no">No<svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+              </tr>
+              <tr>
+                <td>Social scientist(s) and education expert(s) understand ML enough to monitor the ML process on an ongoing basis and can step in to prevent problematic design choices that may cause harm to students (See <a class="blue" style="text-decoration:none" href="https://docs.superhuman.com/@edtechequity/edtech-ai-toolkit-for-racial-equity/ux-design-22" target="_blank" rel="noopener">UX Design</a> section).</td>
+                <td><div class="person"><img src="assets/images/avatar-matthew.png" alt=""><span>Matthew Volk</span><svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+                <td><div class="chip unclear">Unclear<svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+              </tr>
+              <tr>
+                <td>We have access to a (large, comprehensive) dataset with labels created by a trusted party or we can create the labels ourselves to acceptable quality. (See the <a class="doc-link" href="https://docs.superhuman.com/@edtechequity/edtech-ai-toolkit-for-racial-equity/datasets-36" target="_blank" rel="noopener"><img src="assets/icons/pie-chart.svg" alt="" style="width:14px;height:14px">Datasets</a> section for more details). <em>Note: This is a huge barrier that many prospective ML projects cannot overcome.</em></td>
+                <td><div class="person"><img src="assets/images/avatar-liz.png" alt=""><span>Liz Allendorf</span><svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+                <td><div class="chip unclear">Unclear<svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+              </tr>
+              <tr>
+                <td>We have the resources and access required to update the dataset regularly.</td>
+                <td><div class="person"><img src="assets/images/avatar-liz.png" alt=""><span>Liz Allendorf</span><svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+                <td><div class="chip yes">Yes<svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+              </tr>
+              <tr>
+                <td>We have adequate computing resources. If the resources are not in-house, then we have an engineer who is familiar with commercial computing solutions, and how to use AI/ML on these platforms.</td>
+                <td><div class="person"><img src="assets/images/avatar-liz.png" alt=""><span>Liz Allendorf</span><svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+                <td><div class="chip yes">Yes<svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+              </tr>
+              <tr>
+                <td>We have the time to develop the solution fully before deploying, then maintaining the solution during deployment (including bug fixes, model retraining, dataset updates, model updates, update deployment etc.).</td>
+                <td><div class="person"><img src="assets/images/avatar-madison.jpg" alt=""><span>Madison Jacobs</span><svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+                <td><div class="chip yes">Yes<svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+              </tr>
+              <tr>
+                <td>We have the funds to maintain and scale these resources as the company grows.</td>
+                <td><div class="person"><img src="assets/images/avatar-nidhi.png" alt=""><span>Nidhi Hebbar</span><svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+                <td><div class="chip unclear">Unclear<svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+              </tr>
+              <tr>
+                <td>We have the funds and time to adequately test our product with students and teachers, to collect feedback, and to incorporate critical feedback into the product before launch.</td>
+                <td><div class="person"><img src="assets/images/avatar-nidhi.png" alt=""><span>Nidhi Hebbar</span><svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+                <td><div class="chip unclear">Unclear<svg class="chevron" width="12" height="12"><use href="#chevron"/></svg></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="add-row"><svg width="14" height="14"><use href="#plus"/></svg></div>
+      </div>
+
+      <h2 class="section">🎯 Conclusion: Is this a good or a bad idea?</h2>
+
+      <p>Continuously revisit this question before and after making the final decision to deploy. Be careful not to fall into the sunk cost fallacy. It is perfectly natural for a company to realize very late that maintaining an ML system in production is not ethically or financially reasonable for a given use case. Do not try to force a problem into an ML-shaped hole if it does not make sense.</p>
+
+      <h3>After this section, you'll explore your <a class="doc-link" href="https://docs.superhuman.com/@edtechequity/edtech-ai-toolkit-for-racial-equity/logical-assumptions-19" target="_blank" rel="noopener"><img src="assets/icons/megaphone.svg" alt="">Logical Assumptions</a>.</h3>
+      <div class="trailing-space" style="height: 174px"></div>
+    </div>
+  </main>
+
+</body>
+</html>
